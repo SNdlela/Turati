@@ -12,7 +12,9 @@ export default function Home() {
         </Head>
       <h1>Welcome, your future awaits!</h1>
 
-      <iframe src="https://www.youtube.com/embed/Xo1pEPoYi8Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+      <div>
+        <iframe src="https://www.youtube.com/embed/Xo1pEPoYi8Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+      </div>
       <div id="detailsForm">
         <label for="name">Name:</label>
         <input type="text" 
@@ -22,13 +24,14 @@ export default function Home() {
         >
         </input><br></br>
         <button onClick={()=>setDisplayValue(textValue)}>Submit </button>
+        <p id="display">Hello {displayValue}, nice to meet you!</p>
+
       </div>
 
       {/* <Link href="/sub"> */}
       
       {/* </Link> */}
-      <p id="display">Hello {displayValue}, nice to meet you!</p>
-
+      
     </>
   )
 }
