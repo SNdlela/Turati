@@ -25,11 +25,11 @@ iframe {
   width: 50%;
   margin-right: 2%;
   height: 480px;
-  float: left;
+  /* float: left; */
   
 }
-
+/* 
 #detailsForm{
   width: 50%;
   float: left;
-}
+} */

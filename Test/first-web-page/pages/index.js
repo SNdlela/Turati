@@ -4,7 +4,14 @@ import Link from 'next/link'
 
 export default function Home() {
   const [textValue, setTextValue] = useState("");
-  const [displayValue, setDisplayValue] = useState("");
+  const [displayValue, setDisplayValue] = useState(null);
+  function dis(displayValue){
+    if (displayValue) {
+      return (
+        <p id="display">Hello {displayValue}, nice to meet you!</p>
+      );
+    }
+  }
   return (
     <>
         <Head>
@@ -23,18 +30,18 @@ export default function Home() {
         onChange={(e)=>setTextValue(e.target.value)}
         >
         </input><br></br>
-        <button onClick={()=>setDisplayValue(textValue)}>Submit </button>
-        <p id="display">Hello {displayValue}, nice to meet you!</p>
-
+        <button onClick= {()=>setDisplayValue(textValue)}>Submit </button>
+        {dis(displayValue)}
+        
       </div>
-
-      {/* <Link href="/sub"> */}
-      
-      {/* </Link> */}
+      <Link href="/sub">
+        <button> Next Page</button>
+      </Link>
       
     </>
   )
 }
+
 
 
 
